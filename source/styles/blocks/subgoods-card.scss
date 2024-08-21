@@ -1,0 +1,18 @@
+.subgoods-card__link {
+  text-decoration: none;
+}
+
+.subgoods-card__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $additional-black;
+}
+
+.subgoods-card__details {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: $black-description;
+}

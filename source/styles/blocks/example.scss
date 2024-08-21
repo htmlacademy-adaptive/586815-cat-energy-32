@@ -1,0 +1,33 @@
+.example {
+  background-color: $bg-aditional-grey;
+}
+
+.example__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__description {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black-description;
+}
+
+.example__description-title {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__description-text {
+  font-family: $secondary-font;
+  font-size: 12px;
+  line-height: 12px;
+  color: $black-description;
+}
+
+.example__description-conclusion {
+  font-size: 14px;
+  line-height: 20px;
+}

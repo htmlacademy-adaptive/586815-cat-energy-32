@@ -1,0 +1,32 @@
+.button {
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+
+  &--green {
+    background-color: $bg-green;
+    color: $white;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    line-height: 16px;
+    color: $black;
+  }
+
+  &--grey {
+    background-color: $bg-secondary-grey;
+    color: $black-description;
+  }
+
+  &--big-green {
+    background-color: $bg-green;
+    color: $white;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

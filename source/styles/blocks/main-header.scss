@@ -1,0 +1,38 @@
+
+
+.main-header__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  padding: 14px 20px;
+  background-color: $white;
+}
+
+.main-header__logo {
+  &:is(:hover, :focus) {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+
+.main-header__logo-text {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+
+    &:is(:hover, :focus) {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

@@ -9,8 +9,71 @@
 }
 
 .advantages__item {
+  position: relative;
+  //высота временно
+  height: 200px;
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 18px;
   color: $black-description;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $main-color;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--leaf::after {
+    content: "";
+    width: 30px;
+    height: 32px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    background-image: url("../../icons/icon-leaf.svg");
+  }
+
+  &--water::after {
+    content: "";
+    width: 26px;
+    height: 29px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    background-image: url("../../icons/icon-water.svg");
+  }
+
+  &--eat::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    background-image: url("../../icons/icon-eat.svg");
+  }
+
+  &--clock::after {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 31px;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    background-image: url("../../icons/icon-clock.svg");
+  }
 }

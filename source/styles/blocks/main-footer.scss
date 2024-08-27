@@ -1,0 +1,9 @@
+.main-footer__logo {
+  &:is(:hover, :focus-visible, :focus) {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

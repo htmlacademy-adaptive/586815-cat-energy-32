@@ -5,6 +5,72 @@
 .catalogs__item {
   color: $black;
   background-color: $bg-secondary-grey;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: $main-color;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    border-radius: 100vw;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &--slim::after {
+    background: url("../../icons/icon-cat-sitting.svg");
+    width: 36px;
+    height: 50px;
+    top: -2%;
+
+    @media (min-width: $tablet) {
+      width: 140px;
+      height: 194px;
+      top: -10%;
+    }
+
+    @media (min-width: $desktop) {
+      width: 70px;
+      height: 97px;
+      top: -6%;
+    }
+  }
+
+  &--pro::after {
+    background: url("../../icons/icon-cat-walking.svg");
+    width: 67px;
+    height: 28px;
+
+    @media (min-width: $tablet) {
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 134px;
+      height: 56px;
+    }
+  }
 }
 
 .catalogs__title {
@@ -19,4 +85,36 @@
   font-size: 14px;
   line-height: 18px;
   color: $black-description;
+}
+
+.catalogs__button {
+  position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../../icons/icon-arrow-right.svg");
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    top: 25%;
+    right: -39px;
+    transform-origin: left center;
+    transition: transform 0.3s linear;
+
+    @media (min-width: $tablet) {
+      right: -49px;
+    }
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    transform: scaleX(1.33);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }

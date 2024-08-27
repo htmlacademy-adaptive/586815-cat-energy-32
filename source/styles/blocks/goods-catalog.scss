@@ -8,6 +8,23 @@
   list-style: none;
 }
 
+.goods-catalog__item:last-child {
+  position: relative;
+  height: 207px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background: url("../../icons/icon-plus.svg");
+  }
+}
+
 .goods-catalog__subtitle {
   font-weight: 400;
   font-size: 16px;

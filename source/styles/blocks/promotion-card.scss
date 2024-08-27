@@ -1,6 +1,21 @@
 .promotion-card {
-  background-color: $bg-green;
+  background-color: $main-color;
   color: $white;
+  position: relative;
+  width: 280px;
+  height: 290px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 78px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../../icons/icon-gift.svg");
+  }
 }
 
 .promotion-card__text {

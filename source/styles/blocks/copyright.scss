@@ -3,8 +3,35 @@
 }
 
 .copyright__text {
+  display: block;
+  position: relative;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
   color: $black-description;
+
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 149px;
+    width: 27px;
+    height: 34px;
+    mask: url("../../images/logo-html-academy.svg");
+    background-color: #666666;
+  }
+
+  &:is(:hover, :focus, :focus-visible)::after {
+    background-color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-color: $main-color;
+      opacity: 0.3;
+    }
+  }
 }

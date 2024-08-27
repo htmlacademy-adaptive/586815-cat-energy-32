@@ -8,7 +8,7 @@
   border: none;
 
   &--green {
-    background-color: $bg-green;
+    background-color: $main-color;
     color: $white;
   }
 
@@ -24,7 +24,7 @@
   }
 
   &--big-green {
-    background-color: $bg-green;
+    background-color: $main-color;
     color: $white;
     font-size: 20px;
     line-height: 26px;

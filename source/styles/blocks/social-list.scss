@@ -1,5 +1,19 @@
 .social-list {
-  list-style: none;
+  @include list-reset;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 62px;
+  border-top: 1px solid $bg-grey;
+  border-bottom: 1px solid $bg-grey;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    border: none;
+    min-height: 37px;
+  }
 }
 
 .social-list__item {
@@ -21,7 +35,7 @@
     left: 50%;
     width: 27px;
     height: 17px;
-    mask: url("../../icons/icon-vk.svg");
+    mask: url("../../icons/stack.svg#icon-vk");
     background-color: #666666;
   }
 
@@ -33,7 +47,7 @@
     left: 50%;
     width: 24px;
     height: 19px;
-    mask: url("../../icons/icon-youtube.svg");
+    mask: url("../../icons/stack.svg#icon-youtube");
     background-color: #666666;
   }
 
@@ -45,7 +59,7 @@
     left: 50%;
     width: 20px;
     height: 17px;
-    mask: url("../../icons/icon-telegram.svg");
+    mask: url("../../icons/stack.svg#icon-telegram");
     background-color: #666666;
   }
 

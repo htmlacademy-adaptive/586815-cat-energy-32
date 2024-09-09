@@ -7,3 +7,15 @@
     font-display: swap;
   }
 }
+
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin indent-reset {
+  margin: 0;
+  padding: 0;
+}

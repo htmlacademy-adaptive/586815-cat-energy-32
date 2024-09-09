@@ -1,18 +1,118 @@
+.subgoods-card {
+  padding: 13px 0 19px;
+  width: 280px;
+  margin: 0 auto;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "title  table"
+      "button button";
+    padding: 26px 38px 28px;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-areas: "title table button";
+    padding: 15px 0;
+    align-items: center;
+  }
+}
+
 .subgoods-card__link {
   text-decoration: none;
 }
 
 .subgoods-card__title {
+  @include indent-reset;
+  margin-bottom: 13px;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $additional-black;
+
+  @media (min-width: $tablet) {
+    grid-area: title;
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 300px;
+    margin-right: 25px;
+  }
 }
 
+
 .subgoods-card__details {
+  margin-bottom: 15px;
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 14px;
   color: $black-description;
+
+  @media (min-width: $tablet) {
+    grid-area: table;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.subgoods-card__detail {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    justify-content: end;
+    gap: 48px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 0;
+    align-items: center;
+  }
+}
+
+.subgoods-card__detail-name {
+  @media (min-width: $desktop) {
+    width: 200px;
+    margin-right: 43px;
+  }
+}
+
+.subgoods-card__detail-value {
+  @media (min-width: $tablet) {
+    min-width: 42px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 60px;
+    text-align: left;
+    margin-right: 22px;
+  }
+}
+
+.subgoods-card__button {
+  display: block;
+  padding: 10px 109px;
+
+  @media (min-width: $tablet) {
+    grid-area: button;
+    padding: 10px 285px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 244px;
+    padding: 10px 91px;
+  }
 }

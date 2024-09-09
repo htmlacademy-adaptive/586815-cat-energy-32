@@ -1,8 +1,25 @@
+.copyright {
+  margin-top: 9px;
+}
+
 .copyright__link {
+  margin: 0;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+
+  @media (min-width: $tablet) {
+    width: 168px;
+  }
+
+  &:is(:focus) .copyright__text::after {
+    background-color: $main-color;
+  }
 }
 
 .copyright__text {
+  margin: 0;
   display: block;
   position: relative;
   font-family: $secondary-font;
@@ -15,14 +32,18 @@
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 149px;
+    left: 253px;
     width: 27px;
     height: 34px;
     mask: url("../../images/logo-html-academy.svg");
     background-color: #666666;
+
+    @media (min-width: $tablet) {
+      left: 149px;
+    }
   }
 
-  &:is(:hover, :focus, :focus-visible)::after {
+  &:is(:hover)::after {
     background-color: $main-color;
   }
 

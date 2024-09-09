@@ -16,7 +16,6 @@
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <!-- Уточнить по поводу хрефа -->
       <a class="main-header__logo" href="#">
         <picture>
           <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
@@ -37,17 +36,17 @@
       <nav class="main-header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="#">
+            <a class="navigation__link navigation__link--index-page" href="#">
               Главная
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="./catalog.html">
+            <a class="navigation__link navigation__link--index-page" href="./catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">
+            <a class="navigation__link navigation__link--index-page" href="#">
               Подбор программы
             </a>
           </li>
@@ -66,7 +65,7 @@
       <picture>
         <source type="image/png" width="552" height="499" media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
         <source type="image/png" width="709" height="609" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
-        <img src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Образец продукции">
+        <img class="offer__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Образец продукции">
       </picture>
     </section>
     <section class="catalogs">
@@ -87,40 +86,48 @@
     <section class="advantages">
       <h2 class="advantages__title">Как это работает</h2>
       <ul class="advantages__list">
-        <li class="advantages__item advantages__item--leaf">Функциональное питание
+        <li class="advantages__item">Функциональное питание
           содержит только полезные
-          питательные вещества.</li>
-        <li class="advantages__item advantages__item--water">Выпускается в виде порошка,
+          питательные вещества.
+        </li>
+        <li class="advantages__item">Выпускается в виде порошка,
           который нужно лишь залить
-          кипятком и готово.</li>
-        <li class="advantages__item advantages__item--eat">Замените один-два приема
+          кипятком и готово.
+        </li>
+        <li class="advantages__item">Замените один-два приема
           обычной еды на наше
-          функциональное питание.</li>
-        <li class="advantages__item advantages__item--clock">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+          функциональное питание.
+        </li>
+        <li class="advantages__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+        </li>
       </ul>
     </section>
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <dl class="example__description-list">
-        <div class="example__description-item">
-          <dt class="example__description-title">5 кг</dt>
-          <dd class="example__description-text">снижение веса</dd>
+      <div class="example__text-wrapper">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <div class="example__statistic-wrapper">
+          <dl class="example__description-list">
+            <div class="example__description-item">
+              <dt class="example__description-title">5 кг</dt>
+              <dd class="example__description-text">снижение веса</dd>
+            </div>
+            <div class="example__description-item">
+              <dt class="example__description-title">60 дней</dt>
+              <dd class="example__description-text">затрачено времени</dd>
+            </div>
+          </dl>
+          <p class="example__description-conclusion">Затраты на питание: <span class="example__result">15 000 РУБ.</span></p>
         </div>
-        <div class="example__description-item">
-          <dt class="example__description-title">60 дней</dt>
-          <dd class="example__description-text">затрачено времени</dd>
-        </div>
-      </dl>
-      <p class="example__description-conclusion">Затраты на питание: 15 000 РУБ.</p>
-      <div class="example__demonstration">
-        <picture class="example__result-before">
+      </div>
+      <div class="example__slider">
+        <picture class="example__image-wrapper">
           <source type="image/png" width="560" height="512" media="(min-width: 768px)" srcset="images/result-before-tablet-desktop@1x.png 1x, images/result-before-tablet-desktop@2x.png 2x">
-          <img src="images/result-before-mobile@1x.png" srcset="images/result-before-mobile@2x.png 2x" width="280" height="256" alt="Фото кота: результат до">
+          <img class="example__image example__image--right-shift" src="images/result-before-mobile@1x.png" srcset="images/result-before-mobile@2x.png 2x" width="280" height="256" alt="Фото кота: результат до">
         </picture>
-        <picture class="example__result-after">
+        <picture class="example__image-wrapper">
           <source type="image/png" width="560" height="512" media="(min-width: 768px)" srcset="images/result-after-tablet-desktop@1x.png 1x, images/result-after-tablet-desktop@2x.png 2x">
-          <img src="images/result-after-mobile@1x.png" srcset="images/result-after-mobile@2x.png 2x" width="280" height="256" alt="Фото кота: результат после">
+          <img class="example__image example__image--left-shift" src="images/result-after-mobile@1x.png" srcset="images/result-after-mobile@2x.png 2x" width="280" height="256" alt="Фото кота: результат после">
         </picture>
         <button class="example__button" type="button">
           <span class="visually-hidden">Кнопка-слайдер для сравнения фотографий котов до и после употребления СatEnergy</span>
@@ -129,10 +136,12 @@
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="contacts__description">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</p>
+        <h2 class="contacts__title">Приглашаем к&#160;сотрудничеству дилеров!</h2>
+        <address class="contacts__address">
+          <span>ул. Большая
+            Конюшенная, д. 19/8</span>
+          <span class="contacts__address-city">Санкт-Петербург</span>
+        </address>
       </div>
       <div class="contacts__map">
         <h2 class="visually-hidden">Как нас найти</h2>
@@ -147,7 +156,7 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo" href="#">
-        <img src="images/logo-footer.svg" width="128" height="24" alt="Название Cat Energy.">
+        <img class="main-footer__logo-image" src="images/logo-footer.svg" width="128" height="24" alt="Название Cat Energy.">
       </a>
       <ul class="social-list">
         <li class="social-list__item">

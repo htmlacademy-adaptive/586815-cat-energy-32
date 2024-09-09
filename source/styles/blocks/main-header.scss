@@ -1,5 +1,3 @@
-
-
 .main-header__wrapper {
   position: relative;
   display: flex;
@@ -7,8 +5,17 @@
   align-items: center;
   height: 65px;
   padding: 14px 20px;
-  background-color: $white;
+
+  @media (min-width: $tablet) {
+    padding: 25px 34px 25px 30px;
+    min-height: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 55px 110px;
+  }
 }
+
 
 .main-header__logo {
   &:is(:hover, :focus) {

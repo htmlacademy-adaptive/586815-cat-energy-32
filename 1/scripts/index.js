@@ -1,0 +1,1 @@
+var e=document.getElementById("menu-toggle"),n=document.querySelector(".navigation");e.addEventListener("change",()=>{e.checked?n.classList.add("navigation--show"):n.classList.remove("navigation--show")});

@@ -1,9 +1,7 @@
 .subgoods-card {
-  padding: 13px 0 19px;
+  padding: 13px 0 17px;
   width: 280px;
   margin: 0 auto;
-  border-top: 1px solid $grey;
-  border-bottom: 1px solid $grey;
 
   @media (min-width: $tablet) {
     width: 100%;
@@ -57,6 +55,7 @@
   color: $black-description;
 
   @media (min-width: $tablet) {
+    margin: 0;
     grid-area: table;
     font-size: 16px;
     line-height: 20px;
@@ -108,11 +107,13 @@
 
   @media (min-width: $tablet) {
     grid-area: button;
+    margin-top: 24px;
     padding: 10px 285px;
   }
 
   @media (min-width: $desktop) {
     width: 244px;
+    margin: 0;
     padding: 10px 91px;
   }
 }

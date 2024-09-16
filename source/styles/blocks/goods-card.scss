@@ -1,8 +1,8 @@
 .goods-card {
   width: 320px;
-  min-height: 209px;
+  min-height: 207px;
   margin: 0 auto;
-  padding: 20px 20px 25px;
+  padding: 21px 20px 23px;
   display: grid;
   grid-template-columns: 140px 140px;
   grid-template-areas:
@@ -35,7 +35,7 @@
   margin: auto;
 
   @media (min-width: $tablet) {
-    height: 242px;
+    height: 232px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,12 +54,12 @@
 
   @media (min-width: $tablet) {
     width: 135px;
-    margin: 0 auto 20px;
+    margin: 9px auto 16px;
   }
 
   @media (min-width: $desktop) {
     width: 140px;
-    margin: 0 auto 24px;
+    margin: 0 auto;
   }
 }
 
@@ -71,11 +71,12 @@
   @media (min-width: $tablet) {
     width: 250px;
     margin-top: 32px;
-    padding: 10px 94px;
+    padding: 9px 94px;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
+    margin-top: auto;
     padding: 10px 54px;
   }
 }
@@ -86,6 +87,7 @@
   font-size: 16px;
   line-height: 20px;
   color: $additional-black;
+  text-transform: uppercase;
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -119,4 +121,13 @@
   @media (min-width: $desktop) {
     width: 169px;
   }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.goods-card__detail-name,
+.goods-card__detail-value {
+  padding: 0;
 }

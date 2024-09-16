@@ -1,26 +1,33 @@
+.main-footer {
+  width: 100%;
+  background-color: $bg-secondary-grey;
+}
+
 .main-footer__wrapper {
   display: flex;
   flex-direction: column;
   min-height: 240px;
   align-items: center;
   padding: 30px 20px 40px;
-  background-color: $bg-secondary-grey;
 
   @media (min-width: $tablet) {
-    padding: 55px 30px;
+    margin: 0 auto;
+    padding: 47px 30px;
     flex-direction: row;
+    width: $tablet;
     min-height: 147px;
   }
 
   @media (min-width: $desktop) {
-    padding: 66px 110px;
+    padding: 60px 110px;
+    width: $desktop;
     min-height: 169px;
   }
 }
 
 .main-footer__logo {
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 10px 0;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet) {
     margin: 0;

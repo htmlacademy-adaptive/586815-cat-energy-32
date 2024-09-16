@@ -1,12 +1,16 @@
 .advantages {
+  width: 320px;
+  margin: 0 auto;
   padding: 10px 20px 49px;
 
   @media (min-width: $tablet) {
-    padding: 30px 30px 47px;
+    width: $tablet;
+    padding: 28px 30px 46px;
   }
 
   @media (min-width: $desktop) {
-    padding: 40px 106px 39px 110px;
+    width: $desktop;
+    padding: 42px 106px 39px 110px;
   }
 }
 
@@ -17,6 +21,8 @@
   margin: 0 auto 40px 0;
 
   @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
     margin-bottom: 32px;
   }
 }
@@ -31,11 +37,12 @@
   @media (min-width: $tablet) {
     width: 708px;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 37px 57px;
   }
 
   @media (min-width: $desktop) {
     width: 1220px;
-    gap: 100px;
+    gap: 77px;
   }
 }
 
@@ -54,6 +61,8 @@
     min-width: 230px;
     max-width: 250px;
     padding: 151px 0 57px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &::before {
@@ -106,7 +115,7 @@
       display: block;
       position: absolute;
       top: 0;
-      left: 90px;
+      left: 112px;
       font-family: $primary-font;
       font-size: 280px;
       line-height: 280px;

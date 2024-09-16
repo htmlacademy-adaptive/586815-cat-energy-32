@@ -1,5 +1,9 @@
 .copyright {
-  margin-top: 9px;
+  margin-top: 28px;
+
+  @media (min-width: $tablet) {
+    margin-top: 8px;
+  }
 }
 
 .copyright__link {
@@ -8,13 +12,18 @@
   display: flex;
   justify-content: space-between;
   width: 280px;
+  color: #666666;
 
   @media (min-width: $tablet) {
-    width: 168px;
+    width: 162px;
   }
 
-  &:is(:focus) .copyright__text::after {
-    background-color: $main-color;
+  &:is(:hover, :focus, :focus-visible, :active) .copyright__logo {
+    color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -26,33 +35,8 @@
   font-size: 16px;
   line-height: 20px;
   color: $black-description;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 253px;
-    width: 27px;
-    height: 34px;
-    mask: url("../../images/logo-html-academy.svg");
-    background-color: #666666;
-
-    @media (min-width: $tablet) {
-      left: 149px;
-    }
-  }
-
-  &:is(:hover)::after {
-    background-color: $main-color;
-  }
-
-  &:active {
-    opacity: 0.3;
-
-    &::after {
-      background-color: $main-color;
-      opacity: 0.3;
-    }
-  }
+.copyright__logo {
+  margin-top: -7px;
 }

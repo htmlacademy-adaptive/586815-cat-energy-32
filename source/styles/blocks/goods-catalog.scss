@@ -1,10 +1,25 @@
 .goods-catalog {
+  width: 100%;
+
   @media (min-width: $tablet) {
-    padding: 40px 30px 74px;
+    padding: 38px 30px 34px;
   }
 
   @media (min-width: $desktop) {
-    padding: 19px 110px 71px;
+    padding: 19px 110px 31px;
+  }
+}
+
+.goods-catalog__wrapper {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 708px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
   }
 }
 
@@ -35,7 +50,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: 245px 245px 245px 245px;
-    gap: 80px;
+    gap: 61px 80px;
   }
 }
 
@@ -58,7 +73,7 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 35px;
+    top: 40px;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url("../../icons/icon-plus.svg");
@@ -71,7 +86,7 @@
   }
 
   @media (min-width: $tablet) {
-    height: 511px;
+    min-height: 511px;
     padding-top: 82px;
   }
 }

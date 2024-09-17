@@ -124,7 +124,7 @@
     line-height: 60px;
     margin: 0 auto 40px 0;
     color: $black;
-    width: 414px;
+    width: 416px;
     text-align: left;
   }
 }
@@ -147,6 +147,7 @@
 
   @media (min-width: $desktop) {
     max-width: 414px;
+    margin-bottom: 52px;
   }
 }
 

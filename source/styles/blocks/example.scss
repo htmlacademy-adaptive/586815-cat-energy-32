@@ -25,6 +25,10 @@
   @media (min-width: $desktop) {
     padding: 30px 110px 75px;
     border: none;
+
+    &::after {
+      height: 73.5%;
+    }
   }
 }
 
@@ -233,6 +237,7 @@
   position: relative;
   width: 280px;
   margin: 0 auto;
+  z-index: 1;
 
   @media (min-width: $tablet) {
     width: 560px;
@@ -240,6 +245,33 @@
 
   @media (min-width: $desktop) {
     margin-left: -47px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: var(--line-left, 50%);
+    transform: translateX(-50%);
+    background-color: #666666;
+    width: 4px;
+    height: 256px;
+    border: none;
+    border-radius: 2px;
+
+    @media (min-width: $tablet) {
+      height: 512px;
+    }
+  }
+
+  &:has(.example__button:hover, .example__button:focus)::before {
+    background-color: $main-color;
+  }
+
+  &:has(.example__button:active)::before {
+    background-color: rgba(94, 170, 47, 0.6);
   }
 }
 
@@ -251,7 +283,11 @@
   position: relative;
 
   &--left-shift {
-    right: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    clip-path: inset(0% 0% 0% var(--line-left, 50%));
 
     @media (min-width: $tablet) {
       width: 560px;
@@ -269,32 +305,29 @@
 
 .example__button {
   position: absolute;
-  z-index: 1;
   display: block;
-  background-color: #666666;
-  width: 4px;
-  height: 256px;
-  border: none;
-  border-radius: 2px;
+  z-index: 1;
   padding: 0;
-  margin-left: 100px;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   top: 49%;
-  left: 40px;
+  left: calc(50% - 20px);
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #666666;
+  border-radius: 100vw;
+  background-color: $white;
 
   @media (min-width: $tablet) {
-    height: 512px;
     left: 32%;
   }
 
   &:is(:hover, :focus, :focus-visible) {
-    background-color: $main-color;
+    border-color: $main-color;
   }
 
   &:active {
-    background-color: #5eaa2f;
-    opacity: 0.6;
+    border-color: rgba(94, 170, 47, 0.6);
   }
 
   &::before {
@@ -304,31 +337,23 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    border: 2px solid #666666;
-    border-radius: 100vw;
-    background-color: $white;
-  }
-
-  &:is(:hover, :focus, :focus-visible)::before {
-    border-color: $main-color;
-  }
-
-  &:is(:active)::before {
-    border-color: #5eaa2f;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 24px;
     height: 18px;
     mask-image: url("../../icons/slider-arrow.svg");
-    background-color: inherit;
+    background-color: #666666;
   }
+
+  &:is(:hover, :focus, :focus-visible)::before {
+    background-color: $main-color;
+  }
+
+  &:active::before {
+    background-color: #5eaa2f;
+    opacity: 0.6;
+  }
+}
+
+
+.example__half-slider {
+  display: block;
 }

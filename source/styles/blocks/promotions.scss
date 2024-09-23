@@ -1,0 +1,11 @@
+.promotions {
+  padding: 36px 0 0;
+
+  @media (min-width: $tablet) {
+    padding-top: 70px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+  }
+}

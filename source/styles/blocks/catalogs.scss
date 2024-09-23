@@ -1,0 +1,210 @@
+.catalogs {
+  width: 320px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+    margin-top: -4px;
+    padding: 0 30px 15px;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    padding: 26px 110px 31px;
+  }
+}
+
+.catalogs__list {
+  width: 280px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    width: 708px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.catalogs__item {
+  color: $black;
+  background-color: $bg-secondary-grey;
+  position: relative;
+  min-height: 266px;
+  padding: 30px 20px 18px;
+
+  @media (min-width: $tablet) {
+    padding: 77px 50% 57px 52px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 77px 62px 37px 52px;
+    min-height: 374px;
+  }
+
+  &::before {
+    content: "";
+    background-color: $main-color;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 49px;
+    left: 45px;
+    border-radius: 100vw;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet) {
+      width: 200px;
+      height: 200px;
+      top: 192px;
+      left: 545px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100px;
+      height: 100px;
+      top: 98px;
+      left: 102px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &--slim::after {
+    background: url("../../icons/icon-cat-sitting.svg");
+    width: 36px;
+    height: 50px;
+    top: 46px;
+    left: 45px;
+
+    @media (min-width: $tablet) {
+      width: 140px;
+      height: 194px;
+      top: 178px;
+      left: 545px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 70px;
+      height: 97px;
+      top: 90px;
+      left: 102px;
+    }
+  }
+
+  &--pro::after {
+    background: url("../../icons/icon-cat-walking.svg");
+    width: 67px;
+    height: 28px;
+    top: 49px;
+    left: 46px;
+
+    @media (min-width: $tablet) {
+      width: 268px;
+      height: 112px;
+      top: 190px;
+      left: 545px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 134px;
+      height: 56px;
+      top: 97px;
+      left: 101px;
+    }
+  }
+}
+
+.catalogs__title {
+  width: fit-content;
+  margin: 0 auto 29px 70px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto 24px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 74px 162px;
+  }
+}
+
+.catalogs__description {
+  margin: 0 auto 15px;
+  padding-bottom: 23px;
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black-description;
+
+  @media (min-width: $tablet) {
+    width: 340px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 53px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    margin-bottom: 27px;
+  }
+}
+
+.catalogs__button {
+  position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../../icons/icon-arrow-right.svg");
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    top: 25%;
+    right: -39px;
+    transform-origin: left center;
+    transition: transform 0.3s linear;
+
+    @media (min-width: $tablet) {
+      top: 27%;
+      right: -49px;
+    }
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    transform: scaleX(1.33);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}

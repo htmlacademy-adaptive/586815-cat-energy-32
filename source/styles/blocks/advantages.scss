@@ -1,0 +1,135 @@
+.advantages {
+  width: 320px;
+  margin: 0 auto;
+  padding: 10px 20px 49px;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+    padding: 28px 30px 46px;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    padding: 42px 106px 39px 110px;
+  }
+}
+
+.advantages__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0 auto 40px 0;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+}
+
+.advantages__list {
+  @include list-reset;
+  width: 280px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    width: 708px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 37px 57px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    gap: 77px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  padding-left: 80px;
+  min-height: 60px;
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black-description;
+  counter-increment: section;
+
+  @media (min-width: $tablet) {
+    min-height: 280px;
+    min-width: 230px;
+    max-width: 250px;
+    padding: 151px 0 57px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $main-color;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 32px;
+
+    @media (min-width: $tablet) {
+      min-width: 80px;
+      min-height: 80px;
+      top: 80px;
+      left: 40px;
+    }
+  }
+
+  &:nth-child(1)::before {
+    background-image: url("../../icons/icon-leaf.svg");
+    background-size: 30px 32px;
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../../icons/icon-water.svg");
+    background-size: 27px 29px;
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../../icons/icon-eat.svg");
+    background-size: 26px 30px;
+  }
+
+  &:nth-child(4)::before {
+    background-image: url("../../icons/icon-clock.svg");
+    background-size: 27px 31px;
+  }
+
+
+  &::after {
+    display: none;
+
+    @media (min-width: $tablet) {
+      content: counter(section);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 112px;
+      font-family: $primary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $bg-secondary-grey;
+      z-index: -1;
+    }
+  }
+}
+
+.advantages__text {
+  margin: 0;
+  margin-top: 2px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+}

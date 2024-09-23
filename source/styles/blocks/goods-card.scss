@@ -1,0 +1,135 @@
+.goods-card {
+  width: 320px;
+  min-height: 207px;
+  margin: 0 auto;
+  padding: 21px 20px 23px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-areas:
+    "picture title"
+    "picture table"
+    "button  button";
+
+  @media (min-width: $tablet) {
+    width: 324px;
+    min-height: 511px;
+    padding: 0 37px 40px;
+    grid-template-columns: 250px;
+    grid-template-areas:
+      "picture"
+      "title"
+      "table"
+      "button";
+    background: linear-gradient(180deg, transparent 81px, $bg-secondary-grey 81px);
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
+    grid-template-columns: 169px;
+    padding: 0 38px 40px;
+  }
+}
+
+.goods-card__link-picture {
+  grid-area: picture;
+  margin: auto;
+
+  @media (min-width: $tablet) {
+    min-height: 232px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 210px;
+  }
+}
+
+.goods-card__link-title {
+  text-decoration: none;
+  grid-area: title;
+  width: 76px;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    width: 135px;
+    margin: 9px auto 16px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 140px;
+    margin: 5px auto;
+  }
+}
+
+.goods-card__button {
+  grid-area: button;
+  margin-top: 18px;
+  padding: 10px 109px;
+
+  @media (min-width: $tablet) {
+    width: 250px;
+    margin-top: 32px;
+    padding: 9px 94px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    margin-top: auto;
+    padding: 10px 54px;
+  }
+}
+
+.goods-card__title {
+  @include indent-reset;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $additional-black;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.goods-card__details {
+  grid-area: table;
+  font-family: $secondary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: $black-description;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.goods-card__detail {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    width: 250px;
+    margin-bottom: 7px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $grey;
+  }
+
+  @media (min-width: $desktop) {
+    width: 169px;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.goods-card__detail-name,
+.goods-card__detail-value {
+  padding: 0;
+}

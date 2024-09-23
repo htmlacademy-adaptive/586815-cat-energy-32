@@ -1,0 +1,47 @@
+.main-footer {
+  width: 100%;
+  background-color: $bg-secondary-grey;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  align-items: center;
+  padding: 30px 20px 40px;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    padding: 47px 30px;
+    flex-direction: row;
+    width: $tablet;
+    min-height: 147px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 60px 110px;
+    width: $desktop;
+    min-height: 169px;
+  }
+}
+
+.main-footer__logo {
+  padding: 10px 0;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+
+  &:is(:hover, :focus-visible, :focus) {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-footer__logo-image {
+  display: block;
+}

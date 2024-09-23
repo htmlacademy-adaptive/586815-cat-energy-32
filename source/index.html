@@ -6,6 +6,7 @@
   <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/Lato-Regular.woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
@@ -15,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header" data-test="header">
     <div class="main-header__wrapper">
       <a class="main-header__logo" href="#">
         <picture>
@@ -55,9 +56,9 @@
       </nav>
     </div>
   </header>
-  <main class="main-container">
+  <main class="main-container" data-test="main">
     <h1 class="visually-hidden">Главная страница Cat Energy</h1>
-    <section class="offer">
+    <section class="offer" data-test="offer">
       <div class="offer__main-wrapper">
         <div class="offer__wrapper">
           <h2 class="offer__title">Функциональное питание для котов</h2>
@@ -75,22 +76,22 @@
         </picture>
       </div>
     </section>
-    <section class="catalogs">
+    <section class="catalogs" data-test="catalogs">
       <h2 class="visually-hidden">Список каталогов</h2>
       <ul class="catalogs__list">
         <li class="catalogs__item catalogs__item--slim">
           <h3 class="catalogs__title">Похудение</h3>
           <p class="catalogs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="catalogs__button button button--transparent" href="#">Каталог slim</a>
+          <a class="catalogs__button button button--transparent" href="./catalog.html#product-slim">Каталог slim</a>
         </li>
         <li class="catalogs__item catalogs__item--pro">
           <h3 class="catalogs__title">Набор массы</h3>
           <p class="catalogs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="catalogs__button button button--transparent" href="#">Каталог pro</a>
+          <a class="catalogs__button button button--transparent" href="./catalog.html#product-pro">Каталог pro</a>
         </li>
       </ul>
     </section>
-    <section class="advantages">
+    <section class="advantages" data-test="advantages">
       <h2 class="advantages__title">Как это работает</h2>
       <ul class="advantages__list">
         <li class="advantages__item">
@@ -114,7 +115,7 @@
         </li>
       </ul>
     </section>
-    <section class="example">
+    <section class="example" data-test="example">
       <div class="example__wrapper">
         <div class="example__text-wrapper">
           <h2 class="example__title">Живой пример</h2>
@@ -155,7 +156,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" data-test="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Приглашаем к&#160;сотрудничеству дилеров!</h2>
         <address class="contacts__address">
@@ -171,7 +172,7 @@
       </div>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo" href="#">
         <img class="main-footer__logo-image" src="images/logo-footer.svg" width="128" height="24" alt="Название Cat Energy.">

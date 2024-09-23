@@ -75,7 +75,7 @@
   }
 
   &--current {
-    cursor: none;
+    pointer-events: none;
 
     &:hover,
     &:focus,

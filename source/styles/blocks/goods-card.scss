@@ -12,7 +12,7 @@
 
   @media (min-width: $tablet) {
     width: 324px;
-    height: 511px;
+    min-height: 511px;
     padding: 0 37px 40px;
     grid-template-columns: 250px;
     grid-template-areas:
@@ -35,14 +35,14 @@
   margin: auto;
 
   @media (min-width: $tablet) {
-    height: 232px;
+    min-height: 232px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
   @media (min-width: $desktop) {
-    height: 210px;
+    min-height: 210px;
   }
 }
 
@@ -59,7 +59,7 @@
 
   @media (min-width: $desktop) {
     width: 140px;
-    margin: 0 auto;
+    margin: 5px auto;
   }
 }
 
@@ -115,7 +115,9 @@
 
   @media (min-width: $tablet) {
     width: 250px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $grey;
   }
 
   @media (min-width: $desktop) {

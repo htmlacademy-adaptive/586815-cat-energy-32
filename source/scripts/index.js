@@ -31,7 +31,7 @@ button.addEventListener('mousedown', (event) => {
       newLeft = sliderRect.width - button.offsetWidth;
     }
 
-    button.style.left = `${newLeft }px`;
+    button.style.setProperty('--button-left', `${newLeft}px`);
 
     // Центрируем линию под кнопкой
     const linePosition = newLeft + button.offsetWidth / 2;
@@ -59,6 +59,3 @@ button.addEventListener('mousedown', (event) => {
 button.ondragstart = function() {
   return false;
 };
-
-// Установка начального положения кнопки
-button.style.left = 'calc(50% - 20px)'; // По центру

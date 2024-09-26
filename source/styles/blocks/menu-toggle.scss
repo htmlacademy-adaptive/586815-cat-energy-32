@@ -14,6 +14,15 @@
     padding-top: 3px;
     padding-bottom: 3px;
 
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:has(.menu-toggle__button:focus) {
+      outline: 2px solid $black;
+    }
+
+
     &--no-js {
       height: 0;
       padding: 0;

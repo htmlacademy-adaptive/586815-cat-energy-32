@@ -1,14 +1,13 @@
-const checkbox = document.getElementById('menu-toggle');
+const toggleButton = document.querySelector('.menu-toggle__button');
 const navigation = document.querySelector('.navigation');
+const toggleMenu = document.querySelector('.menu-toggle');
 
 navigation.classList.remove('navigation--no-js');
+toggleMenu.classList.remove('menu-toggle--no-js');
 
-checkbox.addEventListener('change', () => {
-  if (checkbox.checked) {
-    navigation.classList.add('navigation--show');
-  } else {
-    navigation.classList.remove('navigation--show');
-  }
+toggleButton.addEventListener('click', () => {
+  toggleMenu.classList.toggle('menu-toggle__button--active');
+  navigation.classList.toggle('navigation--show');
 });
 
 const button = document.querySelector('.example__button');

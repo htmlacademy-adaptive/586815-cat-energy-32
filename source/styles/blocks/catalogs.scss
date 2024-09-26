@@ -46,7 +46,7 @@
   padding: 30px 20px 18px;
 
   @media (min-width: $tablet) {
-    padding: 77px 50% 57px 52px;
+    padding: 77px 315px 57px 52px;
   }
 
   @media (min-width: $desktop) {
@@ -187,16 +187,16 @@
     content: "";
     background-image: url("../../icons/icon-arrow-right.svg");
     position: absolute;
-    width: 24px;
+    width: 55px;
     height: 12px;
-    top: 25%;
-    right: -39px;
+    top: 6px;
+    right: -60px;
     transform-origin: left center;
     transition: transform 0.3s linear;
 
     @media (min-width: $tablet) {
-      top: 27%;
-      right: -49px;
+      top: 9px;
+      right: -70px;
     }
   }
 

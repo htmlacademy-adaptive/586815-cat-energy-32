@@ -114,6 +114,7 @@
 .subscription__input {
   font-family: $primary-font;
   width: 100%;
+  min-height: 58px;
   margin: 0 auto;
   margin-bottom: 15px;
   padding: 13px;
@@ -128,34 +129,21 @@
   }
 
   &:focus {
-    @media (max-width: $tablet) {
-      box-shadow:
-        -1px 0 0 0 $black-description,
-        0 -1px 0 0 $black-description,
-        0 1px 0 0 $black-description,
-        1px 0 0 0 $black-description;
+    border: 2px solid $black-description;
+    padding: 12px;
+
+    @media (min-width: $desktop) {
+      padding: 13px;
     }
-
-
-    box-shadow:
-      -1px 0 0 0 $black-description,
-      0 -1px 0 0 $black-description,
-      0 1px 0 0 $black-description;
   }
 
   &:invalid:not(:placeholder-shown) {
-    @media (max-width: $tablet) {
-      box-shadow:
-        -1px 0 0 0 #ff8282,
-        0 -1px 0 0 #ff8282,
-        0 1px 0 0 #ff8282,
-        1px 0 0 0 #ff8282;
-    }
+    border: 2px solid #ff8282;
+    padding: 12px;
 
-    box-shadow:
-      -1px 0 0 0 #ff8282,
-      0 -1px 0 0 #ff8282,
-      0 1px 0 0 #ff8282;
+    @media (min-width: $desktop) {
+      padding: 13px;
+    }
   }
 
   @media (min-width: $tablet) {

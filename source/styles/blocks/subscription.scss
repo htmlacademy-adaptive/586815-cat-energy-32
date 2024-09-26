@@ -131,19 +131,11 @@
   &:focus {
     border: 2px solid $black-description;
     padding: 12px;
-
-    // @media (min-width: $desktop) {
-    //   padding: 13px;
-    // }
   }
 
   &:invalid:not(:placeholder-shown) {
     border: 2px solid #ff8282;
     padding: 12px;
-
-    // @media (min-width: $desktop) {
-    //   padding: 13px;
-    // }
   }
 
   @media (min-width: $tablet) {

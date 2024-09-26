@@ -27,7 +27,8 @@
     border: none;
 
     &::after {
-      height: 73.5%;
+      height: 100%;
+      top: 166px;
     }
   }
 }
@@ -317,6 +318,10 @@
   border: 2px solid #666666;
   border-radius: 100vw;
   background-color: $white;
+
+  @media (min-width: $tablet) {
+    top: 256px;
+  }
 
   &:is(:hover, :focus, :focus-visible) {
     border-color: $main-color;
